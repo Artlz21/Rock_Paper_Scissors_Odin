@@ -66,9 +66,18 @@ const compare_choices = (player_answer, computer_answer) => {
     }
 }
 
-let player = convert_to_words(player_choice());
-let computer = convert_to_words(computer_choice());
+const game = () => {
+    let iterate = 0;
 
-console.log("Player selected: " + player);
-console.log("Computer selected: " + computer);
-console.log(compare_choices(player, computer));
+    while(iterate < 5){
+        let player = convert_to_words(player_choice());
+        let computer = convert_to_words(computer_choice());
+
+        console.log("Player selected: " + player);
+        console.log("Computer selected: " + computer);
+        console.log(compare_choices(player, computer));
+        iterate++;
+    }
+}
+
+game();
